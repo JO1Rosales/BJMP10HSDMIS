@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medizentory Magic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="logo.png" alt="Medizentory Logo" id="logo">
+            <h1>Medizentory Magic</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="auth-section">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div class="inventory-section hidden">
+            <h2>Inventory Management</h2>
+            <div class="add-item-form">
+                <input type="text" id="itemName" placeholder="Item Name">
+                <select id="itemCategory">
+                    <option value="Medicine">Medicine</option>
+                    <option value="Supply">Supply</option>
+                    <option value="Equipment">Equipment</option>
+                </select>
+                <input type="number" id="itemQuantity" placeholder="Quantity">
+                <input type="date" id="itemExpiry" placeholder="Expiry Date">
+                <button onclick="addItem()">Add Item</button>
+            </div>
+
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Expiry Date</th>
+                        <th>Date Added</th>
+                        <th>Added By</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryBody"></tbody>
+            </table>
+        </div>
+
+        <div class="activity-log hidden">
+            <h2>Activity Log</h2>
+            <table id="activityTable">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>User</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="activityBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
